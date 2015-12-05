@@ -1,0 +1,1892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{5841AF41-DB58-452A-B481-DD2C764E47B7}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Mazui</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Mazui</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BookmarkTableViewController.cs" />
+    <Compile Include="BookmarkTableViewController.designer.cs">
+      <DependentUpon>BookmarkTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPageViewController.cs" />
+    <Compile Include="LoginPageViewController.designer.cs">
+      <DependentUpon>LoginPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <BundleResource Include="Resources\Images\DefaultIcon.png" />
+    <Compile Include="MainForumsTableViewController.cs" />
+    <Compile Include="MainForumsTableViewController.designer.cs">
+      <DependentUpon>MainForumsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewSource\BookmarkTableSource.cs" />
+    <Compile Include="TableViewSource\MainForumsTableSource.cs" />
+    <Compile Include="ThreadTableViewCell.cs" />
+    <Compile Include="ThreadTableViewCell.designer.cs">
+      <DependentUpon>ThreadTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Content Include="PluginsHelp\SettingsReadme.txt" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-tubes296.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-snowcrash971.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-gnugpl.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-c64.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-bsod.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-apple.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yp-amiga859.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yospos-web20.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yospos-netscape.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yospos-janitor.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yospos-hackersafe.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\YOSPOS-DOS.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\yospos-blurit.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-violence.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-taint.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-sega.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-ryu.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-redring.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-ps3.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-metal.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-link.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-letsgo.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-jc.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-jap.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-goomba.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-girl.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-emotion.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ycs-achieve.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\YCS-05.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\YCS-04.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\YCS-02.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\YCS-01.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ww-denim.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestling-sd.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestling-roh.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestling-raw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestlehut-tna.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestlehut-thunder.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestlehut-indy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestlehut-global.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\wrestlehut-ecw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\whine.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\weird.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\video.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\unfunny.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-spoilers.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-reality.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-on-demand.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-dvd.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-competition.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-classic.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-cartoon.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-cable.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tviv-bluray.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tv.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\trp-laliga.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tma.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-wargames.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-story.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-starwars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-recruiting.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-poker.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-mafia.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-gurps.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-dd.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-d20.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-cards.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tg-boardgames.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tfr-box.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\terrordome.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tech.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-weed.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-uppers.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-txt.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-trip_report.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-shrooms.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-rx.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-research.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-halluc.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-downers.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-busted.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-addiction.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tcc-acid.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-vintage.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-speakers.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-mp3.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-highdef.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-headphones.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-gadget.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-cellphone.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-cables.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tava-analog.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\tag-thrad.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\stupid.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\steam.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-wwe.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-sylvia.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-soccer.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-nhl.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-nfl.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-ncaa.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-nba.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-nascar.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-mlb.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-golf.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sports-boxing.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-win.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-sysadmin.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-networking.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-linux.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-laptop.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-hardware.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-code.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-bsd.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shsc-apple.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\shitpost.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sex.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\serious.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\science.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\school.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sas-hockey2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sas-fantasy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sap-language.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\samartd-water.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\samartd-potions.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\samartd-organs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\samartd-interestcheck.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sam-clothing.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sal_badscience.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sadev-bugs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-uefa_tag.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-spl.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-seriea.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-nonleague.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-MOTD_TAG.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-mls_tag.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-ligue1.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-LFP.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-league.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-fifa.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-facup.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-epl.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-championship.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-carling.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\RP-20a6zc0.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\request.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\repeat.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\rant.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\question.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\qcs-mods.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\qcs-green.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-ufc.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-tuf.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-thonglor.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-rumble.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-pride.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-mma.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-k1.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-japan.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-itstime.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\psp-grappling.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\poll.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\politics.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-herps.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-fish.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-dogs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-cats.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-caged.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-bugs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\pi-birds.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\photoshop.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\photos.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-vampire.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-sucks.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-style.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-smugwave.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-sincere.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-rockist.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-robojax.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-rap.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-prince.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-powerband.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-phag.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-kermit.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-kayne.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-irony.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-grind.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-emo.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-dontlike.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-donk.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-dollas.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-dad.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-crabcore.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-aoki.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\phiz-ant.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ouya.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-world.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-us.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-tour.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-rock.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-punk.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-pop.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-metal.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-jazz.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-hiphop.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-electronic.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-country.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\nmd-classical.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\news.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\newbie.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\music.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\movies.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\mods-expert.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-voice.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-theory.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-recording.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-guitar.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-gear.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-feedback.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-dumbass.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-drums.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-contest.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-bass.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-amps.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ml-acoustic.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lp-text.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lp-strategy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lp-rpg.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lp-romhack.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lp-fps.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lp-adventure.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\link.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LICENSE.txt" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-whites.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-trains.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-rungop.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-race2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-purestrain2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-perspective_1.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-pennybags.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-pcc6-2-32-576.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-nazisrael2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-migra.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-marx.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-legacy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-laters.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-japan_clean_fast.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-iraq.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-hansen2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-gotmine.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-gooddog.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-gitrdun2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-gipper.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-gay2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-fuckshitdamntag2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-fuckit3.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-fff.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-fem_LF_tag2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-eurabia.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-eu.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-dji.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-dad.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-choom.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-burden.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-BiCurious.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-article.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-arecountry.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-amerika.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lf-9287.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-2wqxulw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-2mfbryu.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-29qdqgy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-25tjf47.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\LF-24yu5af.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-west.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-sw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-south.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-nw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-ne.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-midwest.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-international.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-europe.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-canada.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\lan-asia.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon23-banme.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-honk.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-dear_richard.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-61-comics.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-60-pig.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-59-lobster.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-52-trading.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-46-trading.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-45-game-pc.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-44-game-gba.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-43-game-gamecube.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-42-game-ps2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-41-game-xbox.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-38-buying.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-37-selling.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-31-hotthread.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\icon-30-attnmod.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\humor.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\help.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-whore.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-tim.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-suck.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-stfu.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-spergin.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-miso.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-jorts.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-jabroni.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-hive.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-glomp.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-fuckthis.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\hell-boot.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-veggie.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-soup.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-snacks.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-meat.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-local.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-fish.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-drink.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-diet.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-dessert.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gws-bread.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-review.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-paintball.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-ohshi.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-milsurp.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-hunting.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-ccw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-ammo.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\guns-airsoft.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gross.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\goonmeet.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-uscg.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-police3.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-pew.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-navy2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-money.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-marines.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-fuck.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-firetruck.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-EMT4.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-army.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\gip-airforce.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-xbone.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-wiiu.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-wii.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\Games-vita.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-psp.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-ps4.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-ps3.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-letsplay.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-ds.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-3ds.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-360ps3tag.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\games-360.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-zounds.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-yuck.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-yourrights.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-words.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-wiki.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-trout.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-troll.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-tree.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-toucan.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-tim.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-thuggery.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-thing.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-suts.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-starcraft.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-spiny.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-speedrun.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-space.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-socks.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-smallthread.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-sandwich.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-salad.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-robocop.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\FYAD-redants.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-puns.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-parroty.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-otherforums.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-nilbog.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-mystery.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-moof.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-menopause.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-magician.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-madmax.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-lovecum.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-imgay.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-hunting.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-horses.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-hogyanker.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-haruhi.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-hark.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-gradients.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-ghosts.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-ghostride.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-framed.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-flannel.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-falconry.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-eggs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-dogfights.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-dirigibles.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-cockfights.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-champion.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-cats.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-burn.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-brews.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-blogs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-blades.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-blaagh.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-bats.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-bapes.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-atheist.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-archery.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fyad-alas.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\fruity.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\food.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\flame.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\event.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\en.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\drugs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\Dorkroom-silkysmooth.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\Dorkroom-K-ROCK.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-wood.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-tools.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-tips.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-step.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-robots.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-homeimprove.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\diy-advice.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-souls.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-scsa.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-neogeo.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-minus.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-lol.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-gameboy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-fuel.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ddrd-dota.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-war.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-religion.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-philosophy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-offmeds.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-notracist.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-law.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-history.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-gotcha.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-GOP.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-fox.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-europe.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-environment.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-economics.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-dems.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-asia.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-africa.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\dd-9-11.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cps-android.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coupon-nonus.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coupon-instore.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coupon-free.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coupon-coupon.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\computers.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coc-web.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coc-theory.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coc-java.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coc-db.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coc-c.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\coc-binbash.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\chooch.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cell-gsm.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cell-cdma.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_scifi.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_hype.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_horror2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_drama.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_director.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_comedy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_classic.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cd_action.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc_design.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-writing.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-tutorial.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-project.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-poetry.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-film.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-fiction.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-design.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-daily.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cc-critique.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\cars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\CA-TAG-CA-streetmoto.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\CA-TAG-CA-roadbike.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\CA-TAG-CA-dirtmoto.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\CA-TAG-CA-atb.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-zimboe.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-xfile.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-unbyob.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-trip.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-treasure.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-soulja.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-sore.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-slayer.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-slax.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-shocking.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-secrets.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-salt.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-safespace.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-post.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-pizzatime.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-mac.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-grumpy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-grouch.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-gents.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-fuckyou.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-friends.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-fluff.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-explosion.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-excuse.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-dont.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-dent.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-chill.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-cheer.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-apu2.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\byob-anti.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-webcomic.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-swag.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-shipping.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-review.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-new.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\BSS-Netflix.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-manga.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-indie.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-fanboy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-discussion.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bss-con.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bs-starcraft.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bs-diablo.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\books.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bb-nonfiction.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bb-foreign.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bb-fantasy.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bb-classics.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\bb-author.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\audio.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\attention.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\asktell-travel.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\asktell-lifestyle.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\asktell-jobs.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\art.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ap-1999.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\amine.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ama.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-trip.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-race.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-newride.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-classic.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-80s.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-70s.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\AICA-TAG-60s.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ai-mods.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\ai-cycles.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\adtrw.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\adtrw-hokutonoken.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\5.0stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\4.5stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\4.0stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\3.5stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\3.0stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\2.5stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\2.0stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\1.5stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\1.0stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\0.5stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\0.0stars.png" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\sticky%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\sticky%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\sticky%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\pm-icon%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\pm-icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\pm-icon%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\pm-icon-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\pm-icon-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\pm-icon-filled.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\page-settings%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\page-settings%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\page-settings%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\lepers%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\lepers%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\lepers.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\lepers-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\lepers-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\lepers-filled.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\hamburger-button.imageset\hamburger%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\hamburger-button.imageset\hamburger.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\forum-list%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\forum-list%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\forum-list.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\forum-list-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\forum-list-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\forum-list-filled.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\copy-iphone%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\copy-iphone%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\copy-iphone%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\compose%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\compose%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\compose%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\cog%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\cog%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\cog%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\cog-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\cog-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\cog-filled%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\bookmarks%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\bookmarks%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\bookmarks%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\bookmarks-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\bookmarks-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\bookmarks-filled%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\back%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\back%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\back.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\arrowright%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\arrowright%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\arrowright%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\arrowleft%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\arrowleft%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\arrowleft%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\action%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\action%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\action%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating5.imageset\rating5%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating4.imageset\rating4%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating3.imageset\rating3%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating2.imageset\rating2%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating1.imageset\rating1%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\selected-tick-icon.imageset\BlueCheckSelected%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\no-filter-icon.imageset\no-filter-icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Leper%27s Colony\title-probation.imageset\title-probation.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\vote%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\vote%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\vote%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\view-in-thread%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\view-in-thread%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\view-in-thread%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\user-profile%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\user-profile%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\user-profile%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\single-users-posts%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\single-users-posts%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\single-users-posts%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\send-private-message%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\send-private-message%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\send-private-message%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\remove-bookmark%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\remove-bookmark%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\remove-bookmark%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\rap-sheet%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\rap-sheet%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\rap-sheet%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\quote-post%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\quote-post%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\quote-post%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\quick-look%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\quick-look%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\quick-look%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\mark-read-up-to-here%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\mark-read-up-to-here%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\mark-read-up-to-here%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\mark-as-unread%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\mark-as-unread%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\mark-as-unread%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\jump-to-last-page%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\jump-to-last-page%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\jump-to-last-page%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\jump-to-first-page%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\jump-to-first-page%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\jump-to-first-page%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\edit-post%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\edit-post%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\edit-post%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\copy-url%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\copy-url%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\copy-url%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\add-bookmark%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\add-bookmark%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\add-bookmark%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\star-on%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\star-on%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\star-on%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\star-off%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\star-off%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\star-off%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\forum-arrow-right%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\forum-arrow-right%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\forum-arrow-right%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\forum-arrow-minus%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\forum-arrow-minus%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\forum-arrow-minus%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\forum-arrow-down%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\forum-arrow-down%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\forum-arrow-down%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\unset-tag%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\unset-tag%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\unset-tag%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-thread-tag.imageset\empty-thread-tag%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-pm-tag.imageset\empty-pm-tag%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\sticky%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\sticky%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\sticky%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\pm-icon%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\pm-icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\pm-icon%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\pm-icon-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\pm-icon-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\pm-icon-filled.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\page-settings%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\page-settings%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\page-settings%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\lepers%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\lepers%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\lepers.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\lepers-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\lepers-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\lepers-filled.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\hamburger-button.imageset\hamburger%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\hamburger-button.imageset\hamburger.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\forum-list%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\forum-list%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\forum-list.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\forum-list-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\forum-list-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\forum-list-filled.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\copy-iphone%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\copy-iphone%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\copy-iphone%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\compose%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\compose%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\compose%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\cog%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\cog%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\cog%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\cog-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\cog-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\cog-filled%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\bookmarks%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\bookmarks%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\bookmarks%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\bookmarks-filled%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\bookmarks-filled%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\bookmarks-filled%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\back%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\back%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\back.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\arrowright%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\arrowright%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\arrowright%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\arrowleft%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\arrowleft%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\arrowleft%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\action%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\action%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\action%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating5.imageset\rating5%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating4.imageset\rating4%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating3.imageset\rating3%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating2.imageset\rating2%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating1.imageset\rating1%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\selected-tick-icon.imageset\BlueCheckSelected%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\no-filter-icon.imageset\no-filter-icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Leper%27s Colony\title-probation.imageset\title-probation.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\vote%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\vote%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\vote%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\view-in-thread%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\view-in-thread%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\view-in-thread%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\user-profile%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\user-profile%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\user-profile%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\single-users-posts%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\single-users-posts%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\single-users-posts%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\send-private-message%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\send-private-message%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\send-private-message%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\remove-bookmark%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\remove-bookmark%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\remove-bookmark%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\rap-sheet%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\rap-sheet%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\rap-sheet%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\quote-post%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\quote-post%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\quote-post%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\quick-look%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\quick-look%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\quick-look%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\mark-read-up-to-here%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\mark-read-up-to-here%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\mark-read-up-to-here%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\mark-as-unread%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\mark-as-unread%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\mark-as-unread%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\jump-to-last-page%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\jump-to-last-page%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\jump-to-last-page%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\jump-to-first-page%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\jump-to-first-page%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\jump-to-first-page%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\edit-post%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\edit-post%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\edit-post%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\copy-url%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\copy-url%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\copy-url%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\add-bookmark%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\add-bookmark%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\add-bookmark%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\star-on%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\star-on%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\star-on%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\star-off%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\star-off%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\star-off%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\forum-arrow-right%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\forum-arrow-right%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\forum-arrow-right%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\forum-arrow-minus%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\forum-arrow-minus%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\forum-arrow-minus%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\forum-arrow-down%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\forum-arrow-down%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\forum-arrow-down%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\unset-tag%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\unset-tag%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\unset-tag%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-thread-tag.imageset\empty-thread-tag%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-pm-tag.imageset\empty-pm-tag%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <None Include="GettingStarted.Xamarin" />
+    <None Include="Info.plist" />
+    <Compile Include="MainPageTabController.cs" />
+    <Compile Include="MainPageTabController.designer.cs">
+      <DependentUpon>MainPageTabController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <Content Include="Entitlements.plist" />
+    <InterfaceDefinition Include="MazuiStoryboard.storyboard" />
+    <None Include="packages.config" />
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-pm-tag.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-thread-tag.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\LaunchImages.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Leper%27s Colony\title-probation.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\no-filter-icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\selected-tick-icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating1.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating2.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating3.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating4.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating5.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\hamburger-button.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-pm-tag.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\empty-thread-tag.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Empty Tags\unset-tag.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-down.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-minus.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\forum-arrow-right.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-off.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Forum Lists\star-on.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\add-bookmark.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\copy-url.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\edit-post.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-first-page.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\jump-to-last-page.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-as-unread.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\mark-read-up-to-here.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quick-look.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\quote-post.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\rap-sheet.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\remove-bookmark.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\send-private-message.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\single-users-posts.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\user-profile.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\view-in-thread.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Icon Action Items\vote.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\LaunchImages.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Leper%27s Colony\title-probation.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\no-filter-icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Post Icon Picker\selected-tick-icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating1.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating2.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating3.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating4.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Posts View\rating5.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\action.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowleft.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\arrowright.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\back.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\bookmarks.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\cog.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\compose.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\copy.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\forum-list.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\hamburger-button.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\lepers.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\page-settings.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon-filled.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Template Images\pm-icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\sticky.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\MazuiMedia.xcassets\Thread Lists\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack-PCL, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack-PCL.1.4.6\lib\HtmlAgilityPack-PCL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.0.0\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.0.0\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net-PCL.2.5.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net.Async, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net.Async-PCL.2.5.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinIOS.Unified, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net.Platform.XamarinIOS.2.5.1\lib\Xamarin.iOS10\SQLite.Net.Platform.XamarinIOS.Unified.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLiteNetExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLiteNetExtensions.1.2.3\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLiteNetExtensionsAsync, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLiteNetExtensions.Async.1.2.4\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensionsAsync.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AwfulForumsLibrary\AwfulForumsLibrary\AwfulForumsLibrary.csproj">
+      <Project>{02db53cb-7539-4ec0-a7cf-36070640193f}</Project>
+      <Name>AwfulForumsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mazui.Core\Mazui.Core.csproj">
+      <Project>{5fd2090e-bd6f-48bb-b844-2d8d994c6305}</Project>
+      <Name>Mazui.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mazui.Database\Mazui.Database.csproj">
+      <Project>{df404e95-5426-4baf-9919-5e9fa33da60c}</Project>
+      <Name>Mazui.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources/MazuiMedia.xcassets/AppIcons.appiconset/Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources/MazuiMedia.xcassets/LaunchImages.launchimage/Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
